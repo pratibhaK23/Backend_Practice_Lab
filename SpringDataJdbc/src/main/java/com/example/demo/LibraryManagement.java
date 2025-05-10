@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.dao.BookDao;
+import com.example.demo.dao.UserDao;
 import com.example.demo.entity.Book;
+import com.example.demo.entity.User;
 
 @SpringBootApplication
 public class LibraryManagement {
@@ -23,13 +25,22 @@ public class LibraryManagement {
 //		bookdao.saveBook(book);
 		
 		
-		
-		
+//		bookdao.getBook(4);
+//		bookdao.getAllBooks();
 		//bookdao.deleteBook(3);
 		//bookdao.isBookIssued(2);
 		
 		
-
+		UserDao userdao=context.getBean(UserDao.class);
+		User user=new User();
+//		
+//		user.setUsername("abc2323");
+//		user.setPassword("1234");
+//		user.setEmail("abc@gmail.com");
+		
+//		userdao.saveUser(user);
+//         userdao.getAllUsers();
+//         userdao.getUser(1);
 	}
 
 	

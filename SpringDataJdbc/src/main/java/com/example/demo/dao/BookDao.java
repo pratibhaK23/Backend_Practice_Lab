@@ -50,7 +50,8 @@ public class BookDao {
 	public void getBook(long id)
 	{
 		String query="select *from book where id=?";
-        jdbcTemplate.queryForObject(query, new BookRowMapper(),id);
+       Book book= jdbcTemplate.queryForObject(query, new BookRowMapper(),id);
+        System.out.println("Book fetched"+"  "+book.getTitle());
 				
 	}
 	
